@@ -1,0 +1,47 @@
+[
+  {
+    "function": "minecraft:exploration_map",
+    "destination": "minecraft:on_treasure_maps",
+    "decoration": "red_x",
+    "zoom": 1,
+    "skip_existing_chunks": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:map"
+              ],
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "filled_map.buried_treasure"
+    },
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:map"
+              ],
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  }
+]
